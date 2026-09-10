@@ -27,13 +27,13 @@ A version-1 plan contains a title, boolean display preferences, and 1–12 activ
 
 ## Session state
 
-| State | Clock behavior | Available transitions |
-|---|---|---|
-| `running` | Decrements remaining time | pause, complete, skip, end |
-| `paused` | No elapsed time | resume, complete, skip, end |
-| `ready` | Remains at zero | complete, skip, end |
-| `finished` | No elapsed time | Start a new session in the interface |
-| `ended` | No elapsed time | Start a new session in the interface |
+| State      | Clock behavior            | Available transitions                |
+| ---------- | ------------------------- | ------------------------------------ |
+| `running`  | Decrements remaining time | pause, complete, skip, end           |
+| `paused`   | No elapsed time           | resume, complete, skip, end          |
+| `ready`    | Remains at zero           | complete, skip, end                  |
+| `finished` | No elapsed time           | Start a new session in the interface |
+| `ended`    | No elapsed time           | Start a new session in the interface |
 
 The engine never advances an activity in response to a clock tick. Reaching zero only changes `running` to `ready`. Completing or skipping the last activity produces `finished`. Ending from any active state produces `ended`. There is no score, compliance metric, or completion reward.
 
@@ -44,7 +44,6 @@ The engine never advances an activity in response to a clock tick. Reaching zero
 Only the current plan and display preferences are stored under `inclusive-session-studio.plan.v1`. Session history stays in memory and is not exported or persisted. There is no remote database. Storage failure is visible in the interface; JSON export remains available. Clearing this site's browser storage removes the saved plan.
 
 Undo stores at most 20 plan snapshots in memory. Refreshing clears undo history. A JSON import is validated completely before replacing a plan. All imported text is escaped or assigned as text; executable markup is never accepted as rendered content.
-
 
 ## Hosting and maintenance
 
