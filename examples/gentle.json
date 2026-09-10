@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "title": "A gentle introduction",
+  "preferences": {
+    "showTimer": false,
+    "highContrast": false
+  },
+  "activities": [
+    {
+      "id": "step-1",
+      "title": "Arrive and settle",
+      "description": "Choose a comfortable place. Take as much time as you need.",
+      "minutes": 3,
+      "category": "settle"
+    },
+    {
+      "id": "step-2",
+      "title": "Explore a texture",
+      "description": "Choose an object to look at or touch. Watching is also an option.",
+      "minutes": 4,
+      "category": "explore"
+    },
+    {
+      "id": "step-3",
+      "title": "A quiet pause",
+      "description": "Rest, stretch, or sit quietly. There is no task to complete.",
+      "minutes": 3,
+      "category": "pause"
+    },
+    {
+      "id": "step-4",
+      "title": "Close together",
+      "description": "Choose how to finish: a word, a gesture, or a quiet goodbye.",
+      "minutes": 2,
+      "category": "close"
+    }
+  ]
+}

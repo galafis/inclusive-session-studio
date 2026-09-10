@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "title": "An optional robot observation",
+  "preferences": {
+    "showTimer": false,
+    "highContrast": false
+  },
+  "activities": [
+    {
+      "id": "step-1",
+      "title": "Choose your distance",
+      "description": "Look at a stationary robot from a distance you choose, or decline.",
+      "minutes": 3,
+      "category": "settle"
+    },
+    {
+      "id": "step-2",
+      "title": "Notice one detail",
+      "description": "Choose something to notice. There is no need to approach or touch.",
+      "minutes": 3,
+      "category": "explore"
+    },
+    {
+      "id": "step-3",
+      "title": "Pause away from the activity",
+      "description": "Take a break in a space of your choice.",
+      "minutes": 3,
+      "category": "pause"
+    },
+    {
+      "id": "step-4",
+      "title": "Close the session",
+      "description": "Choose whether to share a thought or simply finish.",
+      "minutes": 2,
+      "category": "close"
+    }
+  ]
+}

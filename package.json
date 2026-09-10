@@ -1,0 +1,16 @@
+{
+  "name": "inclusive-session-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Make room for choice, calm, and predictable routines.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

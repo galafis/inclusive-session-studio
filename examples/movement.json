@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "title": "Movement and a pause",
+  "preferences": {
+    "showTimer": false,
+    "highContrast": false
+  },
+  "activities": [
+    {
+      "id": "step-1",
+      "title": "Find your space",
+      "description": "Choose where you would like to begin.",
+      "minutes": 2,
+      "category": "settle"
+    },
+    {
+      "id": "step-2",
+      "title": "Choose a movement",
+      "description": "Stretch, walk, or stay seated. Choose what feels comfortable.",
+      "minutes": 4,
+      "category": "move"
+    },
+    {
+      "id": "step-3",
+      "title": "Take a pause",
+      "description": "Choose a quieter place or stay where you are.",
+      "minutes": 3,
+      "category": "pause"
+    },
+    {
+      "id": "step-4",
+      "title": "Finish your way",
+      "description": "Let the facilitator know if you want to finish or plan another time.",
+      "minutes": 2,
+      "category": "close"
+    }
+  ]
+}
