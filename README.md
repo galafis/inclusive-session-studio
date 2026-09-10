@@ -16,6 +16,23 @@
 
 </div>
 
+<!-- domain-workflow:start -->
+
+## Domain workflow · Fluxo do domínio
+
+```mermaid
+flowchart TD
+  A["Activity plan / Plano de atividades"] --> B["Participant-controlled session / Sessão controlada pelo participante"]
+  B --> C["Pause or resume / Pausar ou retomar"]
+  B --> D["Complete or skip / Concluir ou pular"]
+  B --> E["End immediately / Encerrar imediatamente"]
+  F["Timer reaches zero / Temporizador chega a zero"] --> G["Wait for explicit choice / Aguardar escolha explícita"]
+  G --> D
+  C --> B
+```
+
+<!-- domain-workflow:end -->
+
 <a id="english"></a>
 
 ## English
