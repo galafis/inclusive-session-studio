@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "title": "Uma observação opcional de robô",
+  "preferences": {
+    "showTimer": false,
+    "highContrast": false
+  },
+  "activities": [
+    {
+      "id": "step-1",
+      "title": "Escolher sua distância",
+      "description": "Observe um robô parado à distância que escolher ou recuse.",
+      "minutes": 3,
+      "category": "settle"
+    },
+    {
+      "id": "step-2",
+      "title": "Observar um detalhe",
+      "description": "Escolha algo para observar. Não é necessário se aproximar ou tocar.",
+      "minutes": 3,
+      "category": "explore"
+    },
+    {
+      "id": "step-3",
+      "title": "Pausar longe da atividade",
+      "description": "Faça uma pausa em um espaço de sua escolha.",
+      "minutes": 3,
+      "category": "pause"
+    },
+    {
+      "id": "step-4",
+      "title": "Encerrar a sessão",
+      "description": "Escolha entre compartilhar uma ideia ou apenas terminar.",
+      "minutes": 2,
+      "category": "close"
+    }
+  ]
+}

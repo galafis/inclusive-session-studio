@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "activities": 4,
+  "totalMinutes": 11,
+  "initialRemaining": 120,
+  "afterDeadline": {
+    "index": 0,
+    "status": "ready",
+    "remaining": 0
+  },
+  "afterChoice": {
+    "index": 1,
+    "status": "running",
+    "remaining": 240
+  }
+}

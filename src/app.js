@@ -1,3 +1,4 @@
+import { initializeLocalization, localizedPlan, translate } from './i18n.js';
 import {
   presetPlan,
   validatePlan,
@@ -12,7 +13,7 @@ import { downloadJSON, escapeHTML as esc, readJSONFile } from './browser.js';
 const $ = (id) => document.getElementById(id),
   KEY = 'inclusive-session-studio.plan.v1';
 const symbols = { settle: '○', explore: '◇', move: '↗', pause: '≈', close: '◡' };
-let plan = presetPlan(),
+let plan = localizedPlan(presetPlan()),
   selected = 0,
   session = null,
   undo = [],
@@ -61,6 +62,12 @@ function renderPlayer() {
   const ended = session && ['finished', 'ended'].includes(session.status),
     i = session?.index ?? 0,
     activity = session?.plan.activities[i] ?? plan.activities[0];
+  $('current-title').toggleAttribute('data-verbatim', !ended);
+  $('current-description').toggleAttribute('data-verbatim', !ended);
+  $('next-title').toggleAttribute(
+    'data-verbatim',
+    !ended && Boolean((session?.plan ?? plan).activities[i + 1]),
+  );
   $('current-title').textContent = ended ? 'Your session is finished.' : activity.title;
   $('current-description').textContent = ended
     ? 'Thank you for choosing how to take part. You can rest, finish for today, or start again.'
@@ -93,13 +100,13 @@ function renderPlayer() {
 }
 function render() {
   $('print-plan').innerHTML =
-    `<h1>${esc(plan.title)}</h1><p>A flexible activity plan. Pause, skip, or finish whenever you choose.</p><ol>${plan.activities.map((a) => `<li><h2>${esc(a.title)}</h2><p>${esc(a.description)}</p><small>${a.minutes} suggested minutes</small></li>`).join('')}</ol>`;
+    `<h1 data-verbatim>${esc(plan.title)}</h1><p>A flexible activity plan. Pause, skip, or finish whenever you choose.</p><ol>${plan.activities.map((a) => `<li><h2 data-verbatim>${esc(a.title)}</h2><p data-verbatim>${esc(a.description)}</p><small>${a.minutes} suggested minutes</small></li>`).join('')}</ol>`;
   $('plan-title').value = plan.title;
   $('total-time').textContent = `${plannedMinutes(plan)} suggested min`;
   $('activities').innerHTML = plan.activities
     .map(
       (a, i) =>
-        `<button class="activity-item" data-index="${i}" aria-pressed="${selected === i}" aria-label="Edit activity ${i + 1}: ${esc(a.title)}"><span class="number">${i + 1}</span><span>${esc(a.title)}</span><small>${a.minutes}m</small></button>`,
+        `<button class="activity-item" data-index="${i}" aria-pressed="${selected === i}" aria-label="Edit activity ${i + 1}: ${esc(a.title)}"><span class="number">${i + 1}</span><span data-verbatim>${esc(a.title)}</span><small>${a.minutes}m</small></button>`,
     )
     .join('');
   $('plan-controls').disabled = Boolean(active());
@@ -124,7 +131,7 @@ $('activities').onclick = (event) => {
 };
 $('template').onchange = () => {
   selected = 0;
-  mutate(presetPlan($('template').value));
+  mutate(localizedPlan(presetPlan($('template').value)));
   $('status').textContent = 'Template loaded. Adapt any activity to suit the person.';
 };
 $('plan-title').onchange = () => {
@@ -158,8 +165,8 @@ $('add').onclick = () => {
   while (next.activities.some((a) => a.id === `step-${i}`)) i++;
   next.activities.push({
     id: `step-${i}`,
-    title: 'A new invitation',
-    description: 'Choose an activity together, or take a pause.',
+    title: translate('A new invitation'),
+    description: translate('Choose an activity together, or take a pause.'),
     minutes: 3,
     category: 'explore',
   });
@@ -253,3 +260,5 @@ setInterval(() => {
   }
 }, 250);
 render();
+
+initializeLocalization();

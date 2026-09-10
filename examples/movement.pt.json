@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "title": "Movimento e uma pausa",
+  "preferences": {
+    "showTimer": false,
+    "highContrast": false
+  },
+  "activities": [
+    {
+      "id": "step-1",
+      "title": "Encontrar seu espaço",
+      "description": "Escolha onde gostaria de começar.",
+      "minutes": 2,
+      "category": "settle"
+    },
+    {
+      "id": "step-2",
+      "title": "Escolher um movimento",
+      "description": "Alongue-se, caminhe ou permaneça sentado. Escolha o que for confortável.",
+      "minutes": 4,
+      "category": "move"
+    },
+    {
+      "id": "step-3",
+      "title": "Fazer uma pausa",
+      "description": "Escolha um lugar mais tranquilo ou permaneça onde está.",
+      "minutes": 3,
+      "category": "pause"
+    },
+    {
+      "id": "step-4",
+      "title": "Terminar do seu jeito",
+      "description": "Avise ao facilitador se deseja terminar ou combinar outro momento.",
+      "minutes": 2,
+      "category": "close"
+    }
+  ]
+}

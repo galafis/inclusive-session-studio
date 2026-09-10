@@ -8,7 +8,9 @@
 
 **Make room for choice, calm, and predictable routines.**
 
-[Open the live demo](https://galafis.github.io/inclusive-session-studio/) · [Technical design](docs/ARCHITECTURE.md) · [Project guide](docs/FACILITATOR.md) · [Contribute](CONTRIBUTING.md)
+**Planeje atividades previsíveis, no ritmo da pessoa.**
+
+[Live demo · Demonstração](https://galafis.github.io/inclusive-session-studio/) · [Architecture · Arquitetura](docs/ARCHITECTURE.md) · [Project guide · Guia do projeto](docs/FACILITATOR.md) · [Contribute · Contribuir](CONTRIBUTING.md)
 
 [![Checks](https://github.com/galafis/inclusive-session-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/inclusive-session-studio/actions/workflows/ci.yml)
 ![License: MIT](https://img.shields.io/badge/license-MIT-52665e)
@@ -82,6 +84,7 @@ Use **Node.js 22 or newer**. No dependency installation, keys, or account is req
 git clone https://github.com/galafis/inclusive-session-studio.git
 cd inclusive-session-studio
 npm test
+npm run examples
 npm start
 ```
 
@@ -117,7 +120,7 @@ scripts/serve.mjs       Local static development server
 
 ## Verification
 
-The initial release includes **24 automated tests**. Run `npm test` for the behavioral suite or `npm run test:coverage` for a local coverage report. The workflow runs the same suite on Linux and Windows with Node 22 and 24. See [validation notes](docs/VALIDATION.md) for the tested properties and remaining review work.
+The current suite includes **30 automated tests**. Run `npm test` for the behavioral suite or `npm run test:coverage` for a local coverage report. The workflow runs the same suite on Linux and Windows with Node 22 and 24. See [validation notes](docs/VALIDATION.md) for the tested properties and remaining review work.
 
 ## Status and boundaries
 
@@ -171,10 +174,10 @@ O planejador fornece a estrutura de uma interação opcional com robótica: o qu
 
 1. Escolha **A gentle introduction** e selecione uma atividade para editar o convite.
 2. Reordene ou remova atividades; use **Undo change** para recuperar o plano anterior.
-3. Inicie uma sessão, pause e experimente **Skip activity** ou **End session**.
+3. Inicie uma sessão, pause e experimente **Pular atividade** ou **Encerrar sessão**.
 4. Exporte o plano. O tempo sugerido nunca força a troca de atividade.
 
-A interface da demonstração e os documentos técnicos estão em inglês. Este README apresenta a explicação completa em inglês e português. Todos os exemplos usam informações sintéticas.
+A demonstração e a documentação oferecem inglês e português. Use **Language / Idioma** para alternar a interface sem reiniciar o experimento. Todos os exemplos são sintéticos.
 
 ### Executar localmente
 
@@ -184,6 +187,7 @@ Requisito: **Node.js 22 ou superior**. Não é necessário instalar dependência
 git clone https://github.com/galafis/inclusive-session-studio.git
 cd inclusive-session-studio
 npm test
+npm run examples
 npm start
 ```
 
@@ -219,7 +223,7 @@ O arquivo [examples/observation.json](examples/observation.json) é um exemplo c
 
 ### Testes e verificação
 
-A versão inicial contém **24 testes automatizados**. Execute `npm test` para reproduzir a suíte, ou `npm run test:coverage` para gerar um relatório local de cobertura. O status de cada commit pode ser consultado na aba **Actions**.
+A suíte atual contém **30 testes automatizados**. Execute `npm test` para reproduzir a suíte, ou `npm run test:coverage` para gerar um relatório local de cobertura. O status de cada commit pode ser consultado na aba **Actions**.
 
 A suíte verifica pausa sem consumo de tempo, avanço somente por escolha, encerramento imediato, reordenação, cópia independente do plano, validação de importações, limites de duração e tratamento seguro de texto. Não há pontuação ou penalidade por pular atividades.
 
@@ -243,3 +247,13 @@ Contribuições são bem-vindas conforme [CONTRIBUTING.md](CONTRIBUTING.md). Con
 Projetos relacionados: [Accessible Route Lab](https://github.com/galafis/accessible-route-lab), [Rescue Scenario Lab](https://github.com/galafis/rescue-scenario-lab) e [Inclusive Session Studio](https://github.com/galafis/inclusive-session-studio).
 
 [Voltar ao início](#english)
+
+## Language and reproducible examples · Idioma e exemplos reproduzíveis
+
+Use **Language / Idioma** in the demo header to switch between English and Portuguese. Changing the display language preserves the current experiment. The language preference and the current plan are saved locally, as described in the architecture guide. JSON identifiers and state codes remain stable. [Worked examples and expected results](docs/EXPERIMENTS.md) provide reproducible inputs and explicit numerical checks.
+
+Use **Language / Idioma** no cabeçalho para alternar inglês e português. A troca preserva o experimento atual. A preferência de idioma e o plano atual são salvos localmente, conforme o guia de arquitetura. Identificadores JSON e códigos de estado permanecem iguais. Os [exemplos comentados e resultados esperados](docs/EXPERIMENTS.md) oferecem entradas reproduzíveis e verificações numéricas explícitas.
+
+Templates are created in the selected language when loaded. Switching the interface language never rewrites an edited or imported invitation; select the desired language before loading a fresh template. Portuguese JSON plans are included in `examples/`.
+
+Os modelos são criados no idioma selecionado ao carregá-los. Trocar o idioma da interface nunca reescreve um convite editado ou importado; selecione o idioma antes de carregar um novo modelo. Os planos JSON em português estão em `examples/`.

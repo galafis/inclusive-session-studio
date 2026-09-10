@@ -1,5 +1,11 @@
 # Unitree Go2 PRO development roadmap
 
+<!-- bilingual-support -->
+
+[English](#english) · [Português](#português)
+
+## English
+
 ## Program direction
 
 Inclusive Session Studio is a working software prototype in an independent Brazilian robotics program centered on the **Unitree Go2 PRO**. Its focus is inclusive educational activities with children and adults, including autistic participants.
@@ -69,3 +75,60 @@ Together they demonstrate a focused software foundation for robotics, accessibil
 **Gabriel Demetrios Lafis** · Brazil  
 Institutional contact: **gabrieldemetrioslafis@usp.br**  
 [Public portfolio](https://github.com/galafis)
+
+## Português
+
+### Direção do programa
+
+Inclusive Session Studio é um protótipo funcional de um programa brasileiro independente de robótica centrado no **Unitree Go2 PRO**, com foco em atividades educacionais inclusivas com crianças e adultos, incluindo participantes autistas. A versão atual entrega código executável, exemplos, interface, testes e premissas documentadas. Ainda não houve validação física.
+
+### Plataforma de referência e acesso
+
+O PRO é uma referência concreta para planejar demonstrações supervisionadas de quadrúpedes em mobilidade, busca educacional e observação opcional. O acompanhamento lateral anunciado motiva investigar interação pessoa–plataforma; acompanhar uma pessoa não comprova capacidade de guiá-la.
+
+A configuração PRO padrão não está listada para desenvolvimento secundário. Integração personalizada exige confirmação escrita das interfaces suportadas ou uma configuração de desenvolvimento, como EDU. É uma condição de arquitetura e aquisição, não uma capacidade implementada. [Comparação oficial Go2](https://www.unitree.com/go2/), verificada em 10 de setembro de 2026.
+
+| Camada                      | Estado       | Conteúdo                                                                   |
+| --------------------------- | ------------ | -------------------------------------------------------------------------- |
+| Bancada de software         | Implementada | Controles, regras, exemplos sintéticos, testes e exportações               |
+| Demonstração supervisionada | Planejada    | Ambiente preparado, controles suportados, observação e interrupção         |
+| Integração personalizada    | Condicional  | Acesso confirmado, adaptador, validação de interface e evidências próprias |
+
+O navegador não envia comandos ao robô nem recebe sensores ao vivo. Resultados de software não são medições do Go2 PRO.
+
+### Protocolo proposto
+
+Preparar conjuntamente um plano de observação opcional. Um Go2 PRO parado pode ser observado após avaliar ambiente, distância e estado do equipamento. A pessoa escolhe como e se participa. Um facilitador opera o plano; outra pessoa qualificada cuida do equipamento quando necessário. O planejador nunca ativa o robô.
+
+**Medições e registros:** Identificação do próximo convite, acesso a pausa e encerramento, escolha de distância, recusa e preferências de tempo e exibição. Coletar apenas observações de usabilidade acordadas.
+
+Guardar versão do repositório, arquivo, controles, configuração do equipamento, ambiente e observações juntos. Identificar separadamente dados sintéticos e medidos; incluir demonstrações interrompidas e incompletas.
+
+**Critérios de aceitação:** Explicar pela comunicação preferida; preservar pausa, recusa, pulo e encerramento; impedir que o cronômetro ative movimento ou mude a atividade; não tirar conclusões terapêuticas ou diagnósticas.
+
+### Etapas e condições
+
+| Etapa                                       | Entrega                               | Condição para avançar                                                      |
+| ------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------- |
+| Base de software                            | Aplicação e exemplos versionados      | Testes e jornadas principais verificados                                   |
+| Escopo da plataforma                        | Registro de configuração e interfaces | Controles, acesso e limites confirmados                                    |
+| Revisão de bancada                          | Protocolo escrito                     | Revisão de montagem, paradas, medições e responsabilidades                 |
+| Comparação em percurso fechado              | Observações reproduzíveis             | Comparação sem premissas não sustentadas                                   |
+| Revisão profissional                        | Comentários e revisões                | Avaliação de utilidade e limites por profissionais                         |
+| Revisão com participantes, quando aplicável | Materiais acessíveis e resultados     | Revisão apropriada, consentimento/assentimento, retirada e dados acordados |
+
+São etapas propostas, sem estudos concluídos ou datas prometidas. Se um critério falhar, revisar a implementação ou montagem antes de avançar.
+
+### Limite da interface futura
+
+O planejador permanece independente do acionamento do robô. Uma futura interface de eventos para o operador requer revisão própria. Sinais de pausa, recusa e encerramento valem mesmo sem operar a tela. Não se propõe pontuação comportamental ou acompanhamento de resultados clínicos.
+
+### Como os projetos se complementam
+
+- [Accessible Route Lab](https://github.com/galafis/accessible-route-lab): torna premissas de rota e folga inspecionáveis.
+- [Rescue Scenario Lab](https://github.com/galafis/rescue-scenario-lab): reproduz decisões de busca, comunicação e retorno.
+- [Inclusive Session Studio](https://github.com/galafis/inclusive-session-studio): estrutura atividades previsíveis com escolha explícita.
+
+O conjunto apresenta uma base de software para robótica, acessibilidade e educação, sem endosso de fabricante, parceria universitária, prontidão para emergência, orientação física validada ou benefício clínico.
+
+**Responsável:** Gabriel Demetrios Lafis · Brasil. Contato institucional: **gabrieldemetrioslafis@usp.br**. [Portfólio público](https://github.com/galafis).

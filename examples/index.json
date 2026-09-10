@@ -1,0 +1,29 @@
+[
+  {
+    "id": "gentle",
+    "file": "gentle.json",
+    "expected": "gentle.expected.json",
+    "label": {
+      "en": "Gentle introduction and explicit pacing",
+      "pt": "Introdução tranquila e ritmo escolhido"
+    }
+  },
+  {
+    "id": "movement",
+    "file": "movement.json",
+    "expected": "movement.expected.json",
+    "label": {
+      "en": "Movement with optional pauses",
+      "pt": "Movimento com pausas opcionais"
+    }
+  },
+  {
+    "id": "observation",
+    "file": "observation.json",
+    "expected": "observation.expected.json",
+    "label": {
+      "en": "Optional observation of stationary equipment",
+      "pt": "Observação opcional de equipamento parado"
+    }
+  }
+]

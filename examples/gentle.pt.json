@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "title": "Uma introdução tranquila",
+  "preferences": {
+    "showTimer": false,
+    "highContrast": false
+  },
+  "activities": [
+    {
+      "id": "step-1",
+      "title": "Chegar e se acomodar",
+      "description": "Escolha um lugar confortável. Use o tempo de que precisar.",
+      "minutes": 3,
+      "category": "settle"
+    },
+    {
+      "id": "step-2",
+      "title": "Explorar uma textura",
+      "description": "Escolha um objeto para olhar ou tocar. Apenas observar também é uma opção.",
+      "minutes": 4,
+      "category": "explore"
+    },
+    {
+      "id": "step-3",
+      "title": "Uma pausa tranquila",
+      "description": "Descanse, alongue-se ou sente em silêncio. Não há tarefa a cumprir.",
+      "minutes": 3,
+      "category": "pause"
+    },
+    {
+      "id": "step-4",
+      "title": "Encerrar juntos",
+      "description": "Escolha como terminar: uma palavra, um gesto ou uma despedida tranquila.",
+      "minutes": 2,
+      "category": "close"
+    }
+  ]
+}
