@@ -18,6 +18,17 @@
 
 </div>
 
+<!-- connected-community:start -->
+## Continue the demonstration · Continue a demonstração
+
+**EN:** Prepare a session here, then explore printable invitation cards, explicit participant choices and a minimal public journal in the Python encounter kit.
+
+**PT:** Prepare aqui uma sessão; depois explore cartões imprimíveis de convite, escolhas explícitas do participante e um diário público mínimo no kit de encontros em Python.
+
+[Évia · My Encounter / Meu Encontro](https://github.com/galafis/evia-inclusive-encounter-kit) · [Connected walkthrough / Demonstração conectada](docs/CONNECTED_DEMO.md)
+
+<!-- connected-community:end -->
+
 <!-- domain-workflow:start -->
 
 ## Domain workflow · Fluxo do domínio
