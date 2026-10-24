@@ -1,50 +1,29 @@
-<div align="center">
+# <div align="center">
 
-![Inclusive Session Studio](assets/banner.svg)
+**Inclusive education · Educação inclusiva**
 
-# Inclusive Session Studio
-
-[English](#english) · [Português](#portugues)
-
-**Make room for choice, calm, and predictable routines.**
-
-**Planeje atividades previsíveis, no ritmo da pessoa.**
-
-[Live demo · Demonstração](https://galafis.github.io/inclusive-session-studio/) · [Architecture · Arquitetura](docs/ARCHITECTURE.md) · [Project guide · Guia do projeto](docs/FACILITATOR.md) · [Contribute · Contribuir](CONTRIBUTING.md)
+<p align="center"><img src="assets/project-overview.svg" width="960" alt="Workflow illustration: Activity plan → Participant controls → Local session record"></p>
 
 [![Checks](https://github.com/galafis/inclusive-session-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/inclusive-session-studio/actions/workflows/ci.yml)
-![License: MIT](https://img.shields.io/badge/license-MIT-52665e)
-![Runtime dependencies: 0](https://img.shields.io/badge/runtime_dependencies-0-52665e)
+[English](#english) · [Português](#portugues) · [Guided tour / Visita guiada](docs/SHOWCASE.md) · [Validation / Validação](docs/VALIDATION.md)
 
-</div>
+> **EN:** Can an activity end without forcing the next step?<br>
+> **PT:** Uma atividade pode terminar sem forçar a próxima etapa?
 
-<!-- connected-community:start -->
-## Continue the demonstration · Continue a demonstração
+## Start here · Comece aqui
 
-**EN:** Prepare a session here, then explore printable invitation cards, explicit participant choices and a minimal public journal in the Python encounter kit.
+| Goal · Objetivo | Where to go · Por onde começar |
+| --- | --- |
+| Understand a real example · Entender um exemplo concreto | [Walkthrough / Roteiro](docs/EXPERIMENTS.md) |
+| Reproduce and compare · Reproduzir e comparar | [Evidence tour / Visita às evidências](docs/SHOWCASE.md) |
+| Inspect the checks · Inspecionar as verificações | [Validation record / Registro de validação](docs/VALIDATION.md) · [CI](https://github.com/galafis/inclusive-session-studio/actions/workflows/ci.yml) |
+| Explore in the browser · Explorar no navegador | [Public demonstration / Demonstração pública](https://galafis.github.io/inclusive-session-studio/) |
 
-**PT:** Prepare aqui uma sessão; depois explore cartões imprimíveis de convite, escolhas explícitas do participante e um diário público mínimo no kit de encontros em Python.
+**Example result · Resultado do exemplo:** When the first timer expires, the activity index remains 0; explicit completion advances it to 1. / Quando o primeiro tempo expira, o índice permanece 0; a conclusão explícita avança para 1.
 
-[Évia · My Encounter / Meu Encontro](https://github.com/galafis/evia-inclusive-encounter-kit) · [Connected walkthrough / Demonstração conectada](docs/CONNECTED_DEMO.md)
-
-<!-- connected-community:end -->
-
-<!-- domain-workflow:start -->
-
-## Domain workflow · Fluxo do domínio
-
-```mermaid
-flowchart TD
-  A["Activity plan / Plano de atividades"] --> B["Participant-controlled session / Sessão controlada pelo participante"]
-  B --> C["Pause or resume / Pausar ou retomar"]
-  B --> D["Complete or skip / Concluir ou pular"]
-  B --> E["End immediately / Encerrar imediatamente"]
-  F["Timer reaches zero / Temporizador chega a zero"] --> G["Wait for explicit choice / Aguardar escolha explícita"]
-  G --> D
-  C --> B
-```
-
-<!-- domain-workflow:end -->
+**Try a comparison · Experimente uma comparação**<br>
+**EN:** Let the first timer expire, then compare explicit complete, pause, skip and stop actions.<br>
+**PT:** Deixe o primeiro tempo expirar e compare ações explícitas de concluir, pausar, pular e encerrar.
 
 <a id="english"></a>
 
